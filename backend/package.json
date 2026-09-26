@@ -1,0 +1,36 @@
+{
+  "name": "eventbooking-backend",
+  "version": "1.0.0",
+  "description": "Online Event Booking & Smart Ticketing Platform - REST API",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch-path=src src/server.js",
+    "db:create": "node src/db/createDatabase.js",
+    "migrate": "node src/db/migrate.js",
+    "seed": "node src/db/seed.js",
+    "seed:demo": "node src/db/seedDemo.js",
+    "setup": "npm run db:create && npm run migrate && npm run seed"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "helmet": "^8.3.0",
+    "jsonwebtoken": "^9.0.3",
+    "morgan": "^1.12.1",
+    "multer": "^2.4.0",
+    "nodemailer": "^10.0.10",
+    "pdfkit": "^0.20.2",
+    "pg": "^8.23.0",
+    "qrcode": "^1.5.4",
+    "zod": "^4.6.5"
+  }
+}
